@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+import { HashRouter as Router, NavLink, Route } from "react-router-dom";
 import "./index.css";
 
 const routesConfig = [
