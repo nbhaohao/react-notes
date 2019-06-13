@@ -16,6 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://nbhaohao.github.io/react-notes/doc-demos/build",
   "eslintConfig": {
     "extends": "react-app"
   },
