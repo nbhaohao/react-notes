@@ -25,6 +25,11 @@ const routesConfig = [
     name: 'Refs',
     component: lazy_lazy("Refs")
   },
+  {
+    path: '/portals',
+    name: 'Portals',
+    component: lazy_lazy('Portals')
+  },
 ];
 
 const App = () => {
