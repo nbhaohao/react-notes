@@ -12,6 +12,11 @@ const routesConfig = [
     path: "/context/",
     name: "Context",
     component: lazy(() => import("./pages/Context"))
+  },
+  {
+    path: "/errorBoundaries",
+    name: "错误边界",
+    component: lazy(() => import("./pages/ErrorBoundaries"))
   }
 ];
 
