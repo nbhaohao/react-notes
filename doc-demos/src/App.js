@@ -2,22 +2,29 @@ import React, { lazy, Suspense } from "react";
 import { HashRouter as Router, NavLink, Route } from "react-router-dom";
 import "./index.css";
 
+const lazy_lazy = (component) => lazy(() => import(`./pages/${component}`))
+
 const routesConfig = [
   {
     path: "/codeScript/",
     name: "代码分割",
-    component: lazy(() => import("./pages/CodeScript"))
+    component: lazy_lazy("CodeScript")
   },
   {
     path: "/context/",
     name: "Context",
-    component: lazy(() => import("./pages/Context"))
+    component: lazy_lazy("Context")
   },
   {
     path: "/errorBoundaries",
     name: "错误边界",
-    component: lazy(() => import("./pages/ErrorBoundaries"))
-  }
+    component: lazy_lazy("ErrorBoundaries")
+  },
+  {
+    path: '/refs',
+    name: 'Refs',
+    component: lazy_lazy("Refs")
+  },
 ];
 
 const App = () => {
