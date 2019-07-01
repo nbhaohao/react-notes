@@ -2,16 +2,16 @@ import React, { lazy, Suspense } from "react";
 import { HashRouter as Router, NavLink, Route } from "react-router-dom";
 import "./index.css";
 
-const lazy_lazy = (component) => lazy(() => import(`./pages/${component}`))
+const lazy_lazy = component => lazy(() => import(`./pages/${component}`));
 
 const routesConfig = [
   {
-    path: "/codeScript/",
+    path: "/codeScript",
     name: "代码分割",
     component: lazy_lazy("CodeScript")
   },
   {
-    path: "/context/",
+    path: "/context",
     name: "Context",
     component: lazy_lazy("Context")
   },
@@ -21,21 +21,21 @@ const routesConfig = [
     component: lazy_lazy("ErrorBoundaries")
   },
   {
-    path: '/refs',
-    name: 'Refs',
+    path: "/refs",
+    name: "Refs",
     component: lazy_lazy("Refs")
   },
   {
-    path: '/portals',
-    name: 'Portals',
-    component: lazy_lazy('Portals')
-  },
+    path: "/portals",
+    name: "Portals",
+    component: lazy_lazy("Portals")
+  }
 ];
 
 const App = () => {
   return (
     <Router>
-      <div>
+      <div style={{ display: "flex" }}>
         <ul>
           {routesConfig.map(({ path, name }) => {
             return (
